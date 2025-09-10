@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Example</title>
+  <style>
+    
+    .heading {
+      height: 50px;
+      width: 730px;
+      background-color: rgb(94, 94, 255);
+      margin: auto;
+      border-radius: 30px;
+      position: sticky;
+      top: 10px;
+    }
+
+    .heading h1 {
+      text-align: center;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 5px 0;
+    }
+
+    body {
+      background-color: rgb(158, 196, 237);
+      font-family: Arial, sans-serif;
+    }
+
+    #main {
+      background-color: white;
+      width: 700px;
+      padding: 20px;
+      margin: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+
+    }
+
+    fieldset {
+      border: 2px solid black;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px 0;
+      background-color: rgba(205, 227, 234, 0.2);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="week"],
+    input[type="month"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="color"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="file"],
+    input[type="number"],
+    input[type="range"],
+    textarea {
+      width: 95%;
+      padding: 10px;
+      border: 1px solid #444;
+      border-radius: 6px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+
+
+    .form-group div {
+      margin: 8px 0;
+      /* spacing between radio options */
+    }
+
+    .radioButton {
+
+      display: flex;
+      gap: 5px;
+    }
+
+    .location select {
+      width: 100%;
+      /* Full width */
+      padding: 8px;
+      /* Better spacing */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .button1 {
+    height: 35px;
+    width: 98%;
+    background-color: rgb(94, 94, 255);
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.button2 {
+    height: 35px;
+    width: 98%;
+    background-color: gray;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+input:hover{
+  border:2px solid rgb(13, 13, 220);
+}
+  </style>
+</head>
+
+<body>
+  <div class="heading">
+    <h1>Complete Profile Form</h1>
+  </div>
+  <div id="main">
+
+    <fieldset>
+      <legend>
+        <h1>Basic Inputs</h1>
+      </legend>
+
+      <div class="form-group">
+        <label>Full Name :</label>
+        <input type="text" placeholder="Enter name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email Address :</label>
+        <input type="text" placeholder="Enter Email Address" required>
+      </div>
+
+      <div class="form-group">
+        <label>Password :</label>
+        <input type="password" minlength="6" placeholder="Enter password">
+      </div>
+
+      <div class="form-group">
+        <label>Confirm Password :</label>
+        <input type="password" minlength="6" placeholder="Re-enter password">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        <h1>Contact Information</h1>
+      </legend>
+      <div class="form-group">
+        <label for="">Phone Number :</label>
+        <input type="tel" name="" id="" pattern="10">
+      </div>
+      <div class="form-group">
+        <label for="">WEbsite/Portfolio URL</label>
+        <input type="url" name="" id="">
+      </div>
+
+      <div class="form-group">
+        <label for="">Upload profile picture / Resume</label>
+        <input type="file" name="" id="">
+      </div>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        <h1>Selection Input</h1>
+      </legend>
+      <div class="form-group">
+        <label>Gender:</label>
+        <div class="radioButton">
+          <input type="radio" name="gender" id="male" value="Male">
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="female" value="Female">
+          <label for="female">Female</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="Skills">Skills:</label>
+        <div class="radioButton">
+          <input type="checkbox" id="">
+          <label for="Skills">Html</label>
+          <input type="checkbox" id="">
+          <label for="Skills">CSS</label>
+          <input type="checkbox" id="">
+          <label for="Skills">Javascript</label>
+          <input type="checkbox" id="">
+          <label for="Skills">Angular</label>
+          <input type="checkbox" id="">
+          <label for="Skills">React</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="Location">Preferred Location</label>
+        <div class="location">
+          <select name="Location" id="">
+            <option value="" selected>
+              city
+            </option>
+            <option value="">Vadodara</option>
+            <option value="">Ahmedabad</option>
+            <option value="">Rajkot</option>
+            <option value="">Surat</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        <h1>Advance Inputs</h1>
+      </legend>
+      <div>
+        <label for="">Date Of Birth :</label>
+        <input type="date" name="" id="">
+      </div>
+      <div>
+        <label for="">select a week :</label>
+        <input type="week" name="" id="">
+      </div>
+      <div>
+        <label for="">select a month :</label>
+        <input type="month" name="" id="">
+      </div>
+      <div>
+        <label for="">choose a time :</label>
+        <input type="time" name="" id="">
+      </div>
+      <div>
+        <label for="">date&time :</label>
+        <input type="datetime" name="" id="">
+      </div>
+      <div>
+        <label for="">Pick your Favourite color :</label>
+        <input type="color" name="" id="">
+      </div>
+      <div>
+        <label for="">age:</label>
+        <input type="number" name="" id="" min="1" max="10">
+      </div>
+      <div>
+        <label for="">Range for experience :</label>
+        <input type="range" name="" id="" min="0" max="20">
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>
+        <h1>text Inputs</h1>
+      </legend>
+      <div class="form-group">
+        <label for="">about youself:</label>
+        <textarea name="" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="">Adrress:</label>
+        <textarea name=""></textarea>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>form control:</legend>
+      <button type="submit" class="button1">Create Profile</button>
+      <button type="reset" class="button2">Clear Form</button>
+
+    </fieldset>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+body {
+  background-color: rgb(143, 143, 223);
+}
+.container {
+  display: flex; /* Put divs in a row */
+ justify-content: space-around;
+}
+
+img:hover {
+      filter: blur(1px);
+      transform: scale(1.1); /* slight zoom for effect */
+    }
+.box {
+  width: 250px;
+  height: 150px;
+  border: 2px solid black;
+}
+
+.hidden {
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+}
+
+.scroll {
+  overflow: scroll;
+  height: 230px;
+  width:250px;
+}
+.auto {
+  overflow-y: auto;   /* allow vertical scrolling */
+  overflow-x: hidden; /* disable horizontal scroll */
+  width: 100px;
+  height: 100px;
+}
+
+.auto1 {
+  overflow-x: auto;   /* allow horizontal scroll */
+  overflow-y: hidden; /* disable vertical scroll */
+  width: 80px;
+  height: 90px;
+  white-space: nowrap; /* keep text/images in one line */
+}
+
+
+.hidden1 {
+  overflow: hidden;
+  width: 150px;
+  height: 40px;
+  white-space: nowrap;
+}
+
+.ellipsis-box {
+      width: 130px;              /* fixed width */
+     height: 30px;
+      white-space: nowrap;       /* keep text on one line */
+      overflow: hidden;          /* hide overflow */
+      text-overflow: ellipsis;   /* show ... */
+      font-size: 16px;
+    }
+
+
+.visible {
+  overflow: visible;
+  width: 150px;
+  height:150px
+}
+
+

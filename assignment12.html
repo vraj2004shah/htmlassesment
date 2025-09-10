@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 3</title>
+</head>
+<style>
+
+  .boxes {
+    height: 250px;
+  }
+
+  .box1 {
+    background-color: palevioletred;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 80%;
+    transform: skewX(40deg);
+  }
+
+  .box2 {
+    background-color: rgb(196, 181, 226);
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: rotate(90deg);
+  }
+
+  .box3 {
+    background-color: olivedrab;
+    width: 250px;
+    height: 100px;
+    position: fixed;
+    left: 85%;
+    top: 75%;
+  }
+
+  .box4{
+    background-color: rgb(230, 149, 91);
+    width: 60px;
+    height: 130px;
+    position: absolute;
+    font-size: 14px;
+    transition: transform 0.5s, background-color 0.5s;
+  }
+
+  .box4:hover {
+    transform: translateX(50px) translateY(30px);
+    background-color: rgb(134, 107, 190);
+  }
+/*  .box4 {
+    background-color: rgb(230, 149, 91);
+    width: 60px;
+    height: 130px;
+    position: absolute;
+    font-size: 14px;
+  }
+
+  .box4:hover {
+    animation-name: boxAnimation;
+    animation-duration: 5s;
+  }
+
+  @keyframes boxAnimation {
+    0% {
+      top: 0px;
+      left: 0px;
+    }
+
+    25% {
+      top: 25px;
+      left: 25px;
+    }
+
+    100% {
+      top: 100px;
+      left: 100px;
+    }
+  }
+*/
+  .box5 {
+    background-color: rgba(40, 40, 239, 0.786);
+    width: 120px;
+    height: 120px;
+    position: sticky;
+    left: 15%;
+    top: 50%;
+    color: white;
+
+  }
+</style>
+
+<body>
+  
+    <div class="boxes">
+      <div class="box1">Box 1</div>
+      <div class="box2">Box 2</div>
+      <div class="box3">Box 3 - This is my original position, will not move even on scroll</div>
+      <div class="box4">Box 4 - Hover on me and I will change my position</div>
+      <div class="box5">Box 5 - Scroll and i will be at the top - visible</div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perspiciatis, nam, tempore quidem quis eos
+      adipisci similique maiores incidunt accusamus maxime, officiis ullam vitae nemo ab mollitia. Quisquam magni
+      voluptate explicabo minus, ipsum facilis modi quas provident rerum reiciendis saepe ad vero perspiciatis autem
+      exercitationem illum ex repellendus in commodi. Aspernatur ipsum, autem ut nostrum dolorem sequi unde fugit
+      reiciendis nemo. Omnis accusantium quia minus enim delectus. Reiciendis officia explicabo maxime et cupiditate
+      quaerat dolore totam esse adipisci! Eaque laborum voluptas quasi sunt laboriosam natus tenetur labore alias aut!
+      Modi ex adipisci iste, dicta dignissimos sit est, expedita sequi accusamus delectus odit unde voluptatum
+      distinctio numquam facere error amet eius fugit corporis? Itaque illo laudantium blanditiis aperiam alias quia
+      consequatur nostrum tempore saepe sunt natus in quos pariatur, possimus obcaecati totam dolores odio, eaque
+      accusamus quidem quas, nobis tenetur numquam incidunt. Animi rerum obcaecati dicta ducimus, optio, ab, vitae
+      nostrum doloribus alias eos veritatis eveniet. Iusto dolorum facilis nesciunt deleniti, vero tempora? Debitis
+      omnis exercitationem, possimus non voluptas soluta quae tempore enim qui minima quam aspernatur labore voluptates
+      odio, esse distinctio iure unde sequi eos. Nulla, quae repellendus aspernatur inventore atque voluptatibus?
+      Officiis debitis molestias ad rem distinctio at, recusandae nulla blanditiis eveniet omnis explicabo asperiores.
+      Dolorem pariatur animi modi minus possimus corporis eos. Sed aut ipsa voluptatibus consectetur quod odit vitae,
+      neque beatae pariatur perspiciatis sunt esse, soluta quos veniam, deserunt nostrum saepe unde officiis delectus
+      fugiat reprehenderit voluptatem possimus! Debitis nam at quaerat molestiae mollitia numquam quasi, eaque
+      voluptatem quis excepturi amet eligendi. Soluta sapiente, facere repellendus ullam cumque ipsa inventore unde
+      labore beatae culpa veritatis quam molestias eaque alias dolor amet delectus quibusdam minus aliquam distinctio,
+      qui vitae corporis officiis odit! Magni explicabo dolor facere temporibus atque eligendi perspiciatis, nihil,
+      mollitia possimus reprehenderit cum! Qui saepe recusandae quis id! Cupiditate voluptatum commodi eius aliquid, est
+      animi repellat dicta iusto, corporis unde ratione praesentium cumque iste in eligendi officia labore ut blanditiis
+      autem aperiam repudiandae illum libero voluptas. Temporibus adipisci nisi, soluta odio numquam culpa hic voluptate
+      reprehenderit quam architecto et sapiente commodi impedit tempore minima laudantium optio. Nostrum obcaecati est
+      ad, labore expedita qui aliquid harum accusamus velit tempore accusantium officiis quas voluptatem, quasi eum? Nam
+      ducimus impedit commodi soluta. Molestiae consectetur pariatur soluta inventore provident aliquam esse saepe
+      commodi et numquam iusto, dolore dolores? Beatae, laudantium id consectetur fugit ullam ipsum pariatur sapiente ex
+      dicta doloremque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perspiciatis, nam, tempore quidem quis eos
+      adipisci similique maiores incidunt accusamus maxime, officiis ullam vitae nemo ab mollitia. Quisquam magni
+      voluptate explicabo minus, ipsum facilis modi quas provident rerum reiciendis saepe ad vero perspiciatis autem
+      exercitationem illum ex repellendus in commodi. Aspernatur ipsum, autem ut nostrum dolorem sequi unde fugit
+      reiciendis nemo. Omnis accusantium quia minus enim delectus. Reiciendis officia explicabo maxime et cupiditate
+      quaerat dolore totam esse adipisci! Eaque laborum voluptas quasi sunt laboriosam natus tenetur labore alias aut!
+      Modi ex adipisci iste, dicta dignissimos sit est, expedita sequi accusamus delectus odit unde voluptatum
+      distinctio numquam facere error amet eius fugit corporis? Itaque illo laudantium blanditiis aperiam alias quia
+      consequatur nostrum tempore saepe sunt natus in quos pariatur, possimus obcaecati totam dolores odio, eaque
+      accusamus quidem quas, nobis tenetur numquam incidunt. Animi rerum obcaecati dicta ducimus, optio, ab, vitae
+      nostrum doloribus alias eos veritatis eveniet. Iusto dolorum facilis nesciunt deleniti, vero tempora? Debitis
+      omnis exercitationem, possimus non voluptas soluta quae tempore enim qui minima quam aspernatur labore voluptates
+      odio, esse distinctio iure unde sequi eos. Nulla, quae repellendus aspernatur inventore atque voluptatibus?
+      Officiis debitis molestias ad rem distinctio at, recusandae nulla blanditiis eveniet omnis explicabo asperiores.
+      Dolorem pariatur animi modi minus possimus corporis eos. Sed aut ipsa voluptatibus consectetur quod odit vitae,
+      neque beatae pariatur perspiciatis sunt esse, soluta quos veniam, deserunt nostrum saepe unde officiis delectus
+      fugiat reprehenderit voluptatem possimus! Debitis nam at quaerat molestiae mollitia numquam quasi, eaque
+      voluptatem quis excepturi amet eligendi. Soluta sapiente, facere repellendus ullam cumque ipsa inventore unde
+      labore beatae culpa veritatis quam molestias eaque alias dolor amet delectus quibusdam minus aliquam distinctio,
+      qui vitae corporis officiis odit! Magni explicabo dolor facere temporibus atque eligendi perspiciatis, nihil,
+      mollitia possimus reprehenderit cum! Qui saepe recusandae quis id! Cupiditate voluptatum commodi eius aliquid, est
+      animi repellat dicta iusto, corporis unde ratione praesentium cumque iste in eligendi officia labore ut blanditiis
+      autem aperiam repudiandae illum libero voluptas. Temporibus adipisci nisi, soluta odio numquam culpa hic voluptate
+      reprehenderit quam architecto et sapiente commodi impedit tempore minima laudantium optio. Nostrum obcaecati est
+      ad, labore expedita qui aliquid harum accusamus velit tempore accusantium officiis quas voluptatem, quasi eum? Nam
+      ducimus impedit commodi soluta. Molestiae consectetur pariatur soluta inventore provident aliquam esse saepe
+      commodi et numquam iusto, dolore dolores? Beatae, laudantium id consectetur fugit ullam ipsum pariatur sapiente ex
+      dicta doloremque.
+    </p>
+
+</body>
+
+</html>
