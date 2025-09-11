@@ -1,30 +1,21 @@
 
-let markMass1 = 78;
-let markHeight1 = 1.69;
-let johnMass1 = 92;
-let johnHeight1 = 1.95;
+function calculateBMI(mass, height) {
+  return mass / (height ** 2);
+}
 
-let markBMI1 = markMass1 / (markHeight1 ** 2);
-let johnBMI1 = johnMass1 / (johnHeight1 ** 2);
+function compareBMI(markMass, markHeight, johnMass, johnHeight) {
+  let markBMI = calculateBMI(markMass, markHeight);
+  let johnBMI = calculateBMI(johnMass, johnHeight);
 
-let markHigherBMI1 = markBMI1 > johnBMI1;
+  let markHigherBMI = markBMI > johnBMI;
+
+  console.log("Mark's BMI:", markBMI);
+  console.log("John's BMI:", johnBMI);
+  console.log("Mark has higher BMI:", markHigherBMI);
+}
 
 console.log("Test Data 1:");
-console.log("Mark's BMI:", markBMI1);
-console.log("John's BMI:", johnBMI1);
-console.log("Mark has higher BMI", markHigherBMI1);
+compareBMI(78, 1.69, 92, 1.95);
 
-let markMass2 = 95;
-let markHeight2 = 1.88;
-let johnMass2 = 85;
-let johnHeight2 = 1.76;
-
-let markBMI2 = markMass2 / (markHeight2 ** 2);
-let johnBMI2 = johnMass2 / (johnHeight2 ** 2);
-
-let markHigherBMI2 = markBMI2 > johnBMI2;
-
-console.log("\nTest Data 2:");
-console.log("Mark's BMI:", markBMI2);
-console.log("John's BMI:", johnBMI2);
-console.log("Mark has higher BMI", markHigherBMI2);
+console.log("Test Data 2:");
+compareBMI(95, 1.88, 85, 1.76);
