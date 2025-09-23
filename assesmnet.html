@@ -43,11 +43,14 @@
 
         .imagebox img {
             width: 100%;
+            height: 400px;
+            object-fit: cover;
+           
         }
 
         .image h1 {
             color: black;
-            margin: 20px 0 10px;
+        
         }
 
         .imagebox button {
@@ -58,10 +61,9 @@
             cursor: pointer;
             font-size: 16px;
         }
-
-
-
-
+        .imagebox button:hover {
+            background-color: rgb(179, 104, 104);
+        }
         .boxes-container {
             display: flex;
             justify-content: center;
@@ -92,7 +94,6 @@
             margin-bottom: 10px;
         }
 
-
         .box:hover {
             transform: translateY(-10px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -107,6 +108,10 @@
             text-align: center;
             padding: 10px;
             color: white;
+        }
+        .line{
+             margin-left:20px;
+             margin-right:20px;
         }
     </style>
 </head>
@@ -153,6 +158,7 @@
 
     <div class="about">
         <h1>About Us</h1>
+        <div class="line">
         <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam nemo minus quos et fugiat. Animi voluptatum
             expedita quia ut optio quis? Voluptas inventore iure reprehenderit. Obcaecati ipsa odit sunt asperiores
@@ -166,6 +172,7 @@
             eaque nisi adipisci aliquam exercitationem, ad illum provident laboriosam consequatur minima natus ipsam
             incidunt explicabo repudiandae aut officia ducimus ullam culpa voluptas.
         </p>
+        </div>
     </div>
 
     <footer>
