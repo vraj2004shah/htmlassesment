@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Kitchen Assistant</title>
+   
+</head>
+<body>
+    <h1>Smart Kitchen Assistant</h1>
+    <button id="startBtn" onclick="startRoutine(this)">Start Routine</button>
+    <button onclick="resetOutput()">Reset</button>
+    <div id="output"></div>
+
+    <script>
+        const output = document.getElementById('output');
+
+        function showMessage(message, type="task") {
+            const p = document.createElement('p');
+            p.className = type;
+            p.innerHTML = message;
+            output.appendChild(p);
+        }
+
+        function prepareBreakfast() {
+            return new Promise((resolve, reject) => {
+                showMessage("Preparing breakfast...");
+                setTimeout(() => {
+                    const success = true; 
+                    if(success) resolve("Breakfast is ready");
+                    else reject("Failed to prepare breakfast!");
+                }, 2000);
+            });
+        }
+
+        function washDishes() {
+            return new Promise((resolve, reject) => {
+                showMessage("Washing dishes...");
+                setTimeout(() => {
+                    const success = true;
+                    if(success) resolve("Dishes are clean ");
+                    else reject("Failed to wash dishes!");
+                }, 1500);
+            });
+        }
+
+        function makeCoffee() {
+            return new Promise((resolve, reject) => {
+                showMessage("Making coffee...");
+                setTimeout(() => {
+                    const success = true;
+                    if(success) resolve("Coffee is ready ");
+                    else reject("Failed to make coffee!");
+                }, 1000);
+            });
+        }
+
+        async function startRoutine(button) {
+            button.disabled = true;
+            try {
+                const breakfast = await prepareBreakfast();
+                showMessage(`${breakfast}`, "success");
+
+                const dishes = await washDishes();
+                showMessage(`${dishes}`, "success");
+
+                const coffee = await makeCoffee();
+                showMessage(`${coffee}`, "success");
+
+                showMessage(" Morning routine completed!", "success");
+            } catch(error) {
+                showMessage(` ${error}`, "error");
+            } finally {
+                button.disabled = false;
+            }
+        }
+
+        function resetOutput() {
+            output.innerHTML = "";
+        }
+    </script>
+</body>
+</html>
