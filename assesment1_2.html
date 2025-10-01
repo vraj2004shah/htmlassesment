@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Morning Routine Simulator</title>
+  
+</head>
+<body>
+  <h1>Morning Routine Simulator</h1>
+  <button onclick="startRoutine()">Start Routine</button>
+  <div id="output"></div>
+
+  <script>
+    const outputDiv = document.getElementById("output");
+
+    function logMessage(message) {
+      let p = document.createElement("p");
+      p.textContent = message;
+      outputDiv.appendChild(p);
+    }
+
+    function brushTeeth() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Brushed teeth");
+        }, 1000);
+      });
+    }
+
+    function haveBreakfast() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Had breakfast");
+        }, 1500);
+      });
+    }
+
+    function goToWork() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Reached office");    
+        }, 1000);
+      });
+    }
+
+    async function startRoutine() {
+      outputDiv.innerHTML = ""; 
+      try {
+        const teeth = await brushTeeth();
+        logMessage(teeth);
+
+        const breakfast = await haveBreakfast();
+        logMessage(breakfast);
+
+        const work = await goToWork();
+        logMessage(work);
+
+        logMessage("All tasks done!");
+      } catch (error) {
+        logMessage(error);
+      }
+    }
+  </script>
+</body>
+</html>
