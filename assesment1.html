@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coffee Order App</title>
+</head>
+<body>
+  <h1> Coffee Order App</h1>
+  <button onclick="takeOrder()">Start Taking Orders</button>
+  <div id="order-display"></div>
+
+  <script>
+    let allOrders = [];
+
+    function capitalize(item) {
+      return item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
+    }
+
+    function takeOrder() {
+      let name = prompt("Enter Customer Name:");
+      let items = prompt("Enter coffee items (comma-separated):");
+
+      if (!items || items.trim() === "") {
+        alert("No items entered. Order skipped!");
+        return;
+      }
+
+      let formattedItems = items
+        .split(",")
+        .map(item => item.trim())
+        .filter(item => item.length > 0)
+        .map(capitalize);
+
+      
+      let order = { name: name, items: formattedItems };
+      allOrders.push(order);
+
+
+      let orderDisplay = document.getElementById("order-display");
+      orderDisplay.innerHTML = `Hello ${name}! Your order [${formattedItems.join(", ")}] will be ready soon.`;
+    }
+  </script>
+</body>
+</html>
